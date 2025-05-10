@@ -113,3 +113,41 @@ span::after{
 }
 
 
+
+@media (max-width: 479px) {
+  :root {
+    --circle-size: calc((100vw / calc(var(--circle-x) * 2)) - 0.6rem);
+  }
+
+  .watch-container {
+    display: grid;
+    grid-template-columns: repeat(2, calc(var(--circle-x) * var(--circle-size)));
+    grid-template-rows: repeat(2, calc(var(--circle-y) * var(--circle-size)));
+    justify-content: center;
+    gap: 1rem;
+    transform: scale(0.9);
+  }
+
+  .watch-circle-container {
+    transform: scale(0.95);
+  }
+
+  .inspiration-text {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    text-align: center;
+  }
+
+  .container h1 {
+    text-align: center;
+  }
+
+  .social-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .social + .social {
+    margin-left: 0;
+  }
+}
